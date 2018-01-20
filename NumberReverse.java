@@ -3,11 +3,12 @@ import  java.lang.*;
 class NumberReverse{
 	public static void main(String a[]){
 		Scanner scanner= new Scanner(System.in);
-		int n,c,d,rev=0,i=0;
+		int n,c,i=0;
+		double rev=0,d;
 		n=scanner.nextInt();
 		while (n!=0) {
 			d=n%10;
-			rev=rev+d*(Math.pow(10,i));
+			rev=(rev*10)+d;
 			n=n/10;
 			i++;
 		}
