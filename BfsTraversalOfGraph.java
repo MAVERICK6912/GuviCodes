@@ -31,9 +31,27 @@ class BfsTraversalOfGraph{
 			}
 		}
 		public static void main(String[] args) {
-			BfsTraversalOfGraph bfs=new BfsTraversalOfGraph();
-			bfs.addEdge();
-			bfs.BFS();
+			BfsTraversalOfGraph bfs=new BfsTraversalOfGraph(); //pass the number of vertices here.
+			bfs.addEdge();// pass the adjacency list here.
+			bfs.BFS();//pass source node here.
 		}
 	}
 }
+
+/*
+Passing the adjacency list:
+consider the adjacency list:
+-----------------------------------
+|0|-> |1 |->|2|/|
+|1|-> |2 |/|
+|2|-> |0 |->|3|/|
+|3|-> |3 |/|
+-----------------------------------
+pass it as:
+bfs.addEdge(0,1);
+bfs.addEdge(0,2);
+bfs.addEdge(1,2);
+bfs.addEdge(2,0);
+bfs.addEdge(2,3);
+bfs.addEdge(3,3);
+*/
