@@ -8,10 +8,6 @@ class Node{
 		value=val;
 		left=right=null;
 	}
-	public Node(String val){
-		value=val;
-		left=right=null;
-	}
 }
 class TreeTraversal{
 	static Node root;
