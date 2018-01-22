@@ -2,40 +2,45 @@ import java.io.*;
 import java.util.*;
 class Node{
 	int value;
+	String value;
 	Node right,left;
 	public Node(int val){
 		value=val;
 		left=right=null;
 	}
+	public Node(String val){
+		value=val;
+		left=right=null;
+	}
 }
 class TreeTraversal{
-	Node root;
+	static Node root;
 	TreeTraversal(){
 		root=null;
 	}
-	void PostOrder(Node node){
+	void postOrder(Node node){
 		if (node==null) {
 			return;
 		}
-		PostOrder(node.left);
-		PostOrder(node.right);
+		postOrder(node.left);
+		postOrder(node.right);
 		System.out.print(node.value+" ");
 	}
-	void InOrder(Node node){
+	void inOrder(Node node){
 		if (node==null) {
 			return;
 		}
-		InOrder(node.left);
+		inOrder(node.left);
 		System.out.print(node.value+" ");
-		InOrder(node.right);
+		inOrder(node.right);
 	}
-	void PreOrder(Node node){
+	void preOrder(Node node){
 		if (node==null) {
 			return;
 		}
 		System.out.print(node.value+" ");
-		PreOrder(node.left);
-		PreOrder(node.right);
+		preOrder(node.left);
+		preOrder(node.right);
 	}
 	public static void main(String[] args) {
 		TreeTraversal tree=new TreeTraversal();
@@ -45,11 +50,11 @@ class TreeTraversal{
 		tree.root.left.left=new Node(4);
 		tree.root.left.right=new Node(5);
 		System.out.println("PostOrder traversal of tree:");
-		tree.PostOrder(root);
+		tree.postOrder(root);
 		System.out.println("InOrder traversal of tree:");
-		tree.InOrder(root);
+		tree.inOrder(root);
 		System.out.println("PreOrder traversal of tree:");
-		tree.PreOrder(root);
+		tree.preOrder(root);
 	}
 }
 /*
