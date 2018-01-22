@@ -52,3 +52,6 @@ class TreeTraversal{
 		tree.PreOrder(root);
 	}
 }
+/*
+Carefully pass all the nodes of the tree.
+*/
