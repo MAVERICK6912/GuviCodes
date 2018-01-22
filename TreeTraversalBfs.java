@@ -12,6 +12,7 @@ class TreeTraversalBfs{
 	Node root;
 	void Bfs(){
 		Queue<Node> queue=new LinkedList<Node>();
+		queue.add(root);
 		while (!queue.isEmpty()) {
 			Node node=queue.poll();
 			System.out.print(node.value+" ");
