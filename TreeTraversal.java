@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 class Node{
 	int value;
-	String value;
 	Node right,left;
 	public Node(int val){
 		value=val;
