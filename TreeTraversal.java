@@ -46,9 +46,9 @@ class TreeTraversal{
 		tree.root.left.right=new Node(5);
 		System.out.println("PostOrder traversal of tree:");
 		tree.postOrder(root);
-		System.out.println("InOrder traversal of tree:");
+		System.out.println("\nInOrder traversal of tree:");
 		tree.inOrder(root);
-		System.out.println("PreOrder traversal of tree:");
+		System.out.println("\nPreOrder traversal of tree:");
 		tree.preOrder(root);
 	}
 }
