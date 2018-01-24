@@ -22,8 +22,9 @@ class LowestCommonAncestor {
 			System.out.println((path1.size()>0)? n1+" is present": n1+" is not present");
 			System.out.println((path2.size()>0)? n2+" is present": n2+" is not present");
 			return -1;
+		}
 			int i;
-			for (i=0;i<path1.size()&& path2.size();i++ ) {
+			for (i=0;i<path1.size() && i<path2.size();i++ ) {
 				if (!path1.get(i).equals(path2.get(i)))
 					break;
 			}
@@ -51,4 +52,3 @@ class LowestCommonAncestor {
 			System.out.println(lca.findLca(2,3));
 		}
 	}
-}
